@@ -1,16 +1,10 @@
-package config
+package proxy
 
 import (
     "fmt"
-    "os"
-    "gopkg.in/yaml.v2"
+    "log"
+    "os" 
 )
-
-type VPNConfig struct {
-    ServerAddr  string `yaml:"server_addr"`
-    Username    string `yaml:"username"`
-    Password    string `yaml:"password"`
-}
 
 func LoadConfig() (*VPNConfig, error) {
     // Odczytaj konfiguracje z pliku oraz zwróć obiekt VPNConfig
